@@ -1,0 +1,113 @@
+# 编辑器文件
+*.idea/
+*.iml
+*.vscode/
+*.project
+*.workspace
+
+# 临时文件
+
+# 生成文件
+*.exe
+*.class
+*.o
+*.a
+*.out
+*.so
+
+# 大文件类型
+*.zip
+*.doc
+*.excl
+*.ova
+*.pdf
+*.txt
+*.md
+*.jar
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.xls
+*.xlsx
+
+# 图片
+*.png
+*.jpg
+*.jpeg
+
+# 忽略所有文件
+#*
+# 仅追踪 .java 文件（含子目录）
+!**/*.java
+
+# 例外：保留 .gitignore 文件自身
+!.gitignore
+
+# 可选：排除常见干扰项（保持仓库整洁）
+## 构建工具目录
+/target/
+/build/
+/out/
+/bin/
+/.gradle/
+
+## IDE 配置文件
+/.idea/
+*.iml
+*.ipr
+*.iws
+
+## 系统文件
+.DS_Store
+Thumbs.db
+
+##ignore this file##
+/target/
+/.idea/
+/.settings/
+/.vscode/
+/bin/
+
+.classpath
+.project
+.settings
+.idea
+ ##filter databfile、sln file##
+*.mdb
+*.ldb
+*.sln
+##class file##
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+# compression file
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.via
+*.tmp
+*.err
+*.log
+*.iml
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.factorypath
+/.mvn/
+/mvnw.cmd
+/mvnw

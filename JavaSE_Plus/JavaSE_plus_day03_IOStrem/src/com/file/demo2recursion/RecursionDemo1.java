@@ -1,0 +1,18 @@
+package com.file.demo2recursion;
+
+public class RecursionDemo1 {
+    public static void main(String[] args) {
+        // 目标：认识递归的形式。
+        // 死循环
+        /**
+         * Exception in thread "main" java.lang.StackOverflowError
+         */
+        printA();
+    }
+
+    public static void printA() {
+        System.out.println("===A执行了===");
+        printA(); // 直接递归：自己调用自己  .
+        // 递归可能出现死循环，导致出现栈内存溢出现象。
+    }
+}
