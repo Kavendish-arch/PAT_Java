@@ -21,6 +21,8 @@ class UserServiceImpl{
         UserDao userDao = new UserDao();
         userDao.update();
         System.out.println();
+
+
     }
 
     public void test2(){

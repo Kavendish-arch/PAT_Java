@@ -14,6 +14,9 @@
 *.a
 *.out
 *.so
+*.out/
+*.target/
+target/
 
 # 大文件类型
 *.zip

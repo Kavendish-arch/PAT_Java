@@ -7,37 +7,18 @@ import java.util.*;
  * @version 1.0
  * @projectName PAT_Java
  * @package com.chen.exercise
- * @className com.chen.exercise.ExerciseSellTiktle
+ * @className com.chen.exercise.ExerciseSellTitle
  * @date 2025/4/20 21:54
  * @description @todo
  */
-public class ExerciseSellTiktle {
+public class ExerciseSellTitle {
     public static void main(String[] args) {
         int num = 1000;
         //模拟多人买票
         TicketWindows station = new TicketWindows(num);
         List<Integer> list = new Vector<>();
 
-        List<Thread> threads = new ArrayList<>();
-        for (int i = 0; i < 2000; i++) {
-            Thread thread = new Thread(() -> {
-
-                //读写操作
-                //
-                int x = station.sell(getRandom());
-                // 临界区，对共享操作有读写操作
-                list.add(x);
-                try {
-                    Thread.sleep(getRandom());
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            });
-
-            // 在主线程使用，没有线程共享
-            threads.add(thread);
-            thread.start();
-        }
+        List<Thread> threads = getThreads(station, list);
         threads.forEach(thread -> {
             try {
                 thread.join();
@@ -61,6 +42,30 @@ public class ExerciseSellTiktle {
         0
          */
 //        System.out.println(station.getNum() + list.stream().mapToInt(i->i).sum());
+    }
+
+    private static List<Thread> getThreads(TicketWindows station, List<Integer> list) {
+        List<Thread> threads = new ArrayList<>();
+        for (int i = 0; i < 2000; i++) {
+            Thread thread = new Thread(() -> {
+
+                //读写操作
+                //
+                int x = station.sell(getRandom());
+                // 临界区，对共享操作有读写操作
+                list.add(x);
+                try {
+                    Thread.sleep(getRandom());
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+
+            // 在主线程使用，没有线程共享
+            threads.add(thread);
+            thread.start();
+        }
+        return threads;
     }
 
     static Random random = new Random();

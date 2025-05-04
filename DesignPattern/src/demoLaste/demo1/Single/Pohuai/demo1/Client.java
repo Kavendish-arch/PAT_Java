@@ -14,7 +14,7 @@ import java.io.ObjectOutputStream;
  * @package demoLaste.demo1.Single.Pohuai.demo1
  * @className demoLaste.demo1.Single.Pohuai.demo1.Client
  * @date 2024/10/22 16:28
- * @description 测试用反射破坏单例模式
+ * @description 测试用反序列化破坏单例模式
  */
 public class Client {
     public static void main(String[] args) throws Exception {
@@ -36,12 +36,13 @@ public class Client {
         oos.close();
     }
 
-    public static Object readObjectFromFile() throws Exception{
+    public static void readObjectFromFile() throws Exception{
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("object.txt"));
 
         Singleton instance = (Singleton) ois.readObject();
         System.out.println(instance);
+        System.out.println(Singleton.getInstance());
+        System.out.println(instance == Singleton.getInstance());
         ois.close();
-        return null;
     }
 }

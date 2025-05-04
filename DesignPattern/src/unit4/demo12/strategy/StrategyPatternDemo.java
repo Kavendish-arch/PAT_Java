@@ -1,4 +1,4 @@
-package unit4.demo12;
+package unit4.demo12.strategy;
 
 /**
 * @projectName DesignPattern

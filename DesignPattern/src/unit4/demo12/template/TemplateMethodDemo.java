@@ -1,17 +1,16 @@
-package unit4.demo12;
+package unit4.demo12.template;
 
 import java.util.Scanner;
 
 /**
-* @projectName DesignPattern
-* @package unit4.demo12
-* @className unit4.demo12.TemplateMethodDemo
-
-* @author chenyingtao
-* @date 2025/4/9 15:50
-* @version 1.0
-* @description @todo 
-*/
+ * @author chenyingtao
+ * @version 1.0
+ * @projectName DesignPattern
+ * @package unit4.demo12
+ * @className unit4.demo12.template.TemplateMethodDemo
+ * @date 2025/4/9 15:50
+ * @description @todo
+ */
 // 抽象模板类
 abstract class BeverageTemplate {
     // 模板方法（final防止子类覆盖）
@@ -35,6 +34,7 @@ abstract class BeverageTemplate {
 
     // 抽象方法（由子类实现）
     protected abstract void brew();
+
     protected abstract void addCondiments();
 
     // 钩子方法（可选覆盖）

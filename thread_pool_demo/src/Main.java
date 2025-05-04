@@ -10,7 +10,7 @@ public class Main {
                 new RejectHandler() {
                     @Override
                     public void reject(Runnable command, SThreadPool sThreadPool) {
-                        System.out.println("<UNK>");
+                        System.out.println("拒绝执行");
                     }
                 });
         for (int i = 0; i < 20; i++) {
@@ -26,6 +26,6 @@ public class Main {
 
         }
 
-
+        
     }
 }
