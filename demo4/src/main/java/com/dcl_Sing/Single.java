@@ -2,7 +2,6 @@ package com.dcl_Sing;
 
 import java.io.Serializable;
 
-import com.demo5.SimpleLazy;
 
 /**
  * 单例模式
@@ -44,6 +43,10 @@ public final class Single implements Serializable {
     // 反序列化，不采用字节码对象创建对象，直接返回单例对象
     public Object readResolve() {
         return single;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Single.getSingle());
     }
 }
 

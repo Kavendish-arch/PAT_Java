@@ -1,3 +1,5 @@
+package com.chen.pool;
+
 public interface RejectHandler {
 
     public void reject(Runnable command, SThreadPool sThreadPool);
