@@ -1,5 +1,7 @@
 package com.chen.pool;
 
+import com.chen.pool.impl.DiscardOldestPolicyRejectHandle;
+
 import java.util.concurrent.TimeUnit;
 
 /***
@@ -8,13 +10,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class Main {
     public static void main(String[] args) {
-        SThreadPool stp = new SThreadPool(2, 3, 1, TimeUnit.SECONDS,
-                new RejectHandler() {
-                    @Override
-                    public void reject(Runnable command, SThreadPool sThreadPool) {
-                        System.out.println("拒绝执行");
-                    }
-                });
+        SThreadPool stp = new SThreadPool(4, 5, 10, TimeUnit.SECONDS,
+                new DiscardOldestPolicyRejectHandle());
         for (int i = 0; i < 20; i++) {
             final int i1 = i;
             stp.execute(() -> {
@@ -28,6 +25,7 @@ public class Main {
 
         }
 
-        
+        stp.shutdown();
+
     }
 }

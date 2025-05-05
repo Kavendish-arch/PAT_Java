@@ -9,6 +9,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 自定义阻塞队列
+ * 消息队列
+ *
  * @param <T>
  */
 public class BlockingQueueImy <T>{

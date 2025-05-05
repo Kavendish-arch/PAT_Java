@@ -1,5 +1,6 @@
 package com.chen.pool;
 
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class BlockingQueueTest {
     public static void main(String[] args) throws InterruptedException {
