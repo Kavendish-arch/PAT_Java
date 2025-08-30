@@ -1,93 +1,28 @@
-# 编辑器文件
-*.idea/
-*.iml
-*.vscode/
-*.project
-*.workspace
+# 保留 .gitignore 文件自身
+!.gitignore
 
-# 临时文件
-
-# 生成文件
-*.exe
-*.class
-*.o
-*.a
-*.out
-*.so
-*.out/
-*.target/
-target/
-
-# 大文件类型
-*.zip
-*.doc
-*.excl
-*.ova
-*.pdf
-*.txt
-*.md
-*.jar
-*.ppt
-*.pptx
-*.doc
-*.docx
-*.xls
-*.xlsx
-
-# 图片
-*.png
-*.jpg
-*.jpeg
-
-# 忽略所有文件
-#*
+# 忽略所有文件（已注释，仅作说明用途）
+# *
 # 仅追踪 .java 文件（含子目录）
 !**/*.java
 
-# 例外：保留 .gitignore 文件自身
-!.gitignore
-
-# 可选：排除常见干扰项（保持仓库整洁）
-## 构建工具目录
-/target/
-/build/
-/out/
-/bin/
-/.gradle/
-
-## IDE 配置文件
-/.idea/
-*.iml
-*.ipr
-*.iws
-
-## 系统文件
-.DS_Store
-Thumbs.db
-
-##ignore this file##
-/target/
-/.idea/
-/.settings/
-/.vscode/
-/bin/
-
-.classpath
-.project
-.settings
-.idea
- ##filter databfile、sln file##
-*.mdb
-*.ldb
-*.sln
-##class file##
-*.com
+# 编译产物与类文件
 *.class
+*.com
 *.dll
 *.exe
 *.o
 *.so
-# compression file
+*.out
+*.a
+
+# 日志与临时文件
+*.log
+*.tmp
+*.err
+*.via
+
+# 压缩包与打包文件
 *.7z
 *.dmg
 *.gz
@@ -96,12 +31,62 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
-*.via
-*.tmp
-*.err
-*.log
+
+# IDE 相关文件
+## IntelliJ IDEA
+*.iws
 *.iml
-# OS generated files #
+*.ipr
+out/
+.idea/
+
+## Eclipse
+.project
+.classpath
+.settings/
+.target/
+bin/
+
+## NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## VS Code
+.vscode/
+
+## 其他 IDE 配置
+.factorypath
+
+# 构建工具输出目录
+/target/
+/build/
+/out/
+/bin/
+/.gradle/
+/.mvn/
+/mvnw
+/mvnw.cmd
+
+# 版本管理辅助文件
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.sonar/
+
+# 数据库相关文件
+*.mdb
+*.ldb
+*.sln
+
+# 操作系统生成文件
 .DS_Store
 .DS_Store?
 ._*
@@ -110,7 +95,19 @@ Thumbs.db
 Icon?
 ehthumbs.db
 Thumbs.db
-.factorypath
-/.mvn/
-/mvnw.cmd
-/mvnw
+
+# 大文件类型（可选）
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.pdf
+*.txt
+*.md
+*.excl
+*.ova
+*.png
+*.jpg
+*.jpeg
