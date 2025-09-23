@@ -1,4 +1,4 @@
-package com.chen.mthread.creat_thread;
+package mthread.creat_thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

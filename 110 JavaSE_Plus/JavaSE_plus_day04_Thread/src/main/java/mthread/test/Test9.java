@@ -1,4 +1,4 @@
-package com.chen.mthread.test;
+package mthread.test;
 
 import java.sql.Time;
 

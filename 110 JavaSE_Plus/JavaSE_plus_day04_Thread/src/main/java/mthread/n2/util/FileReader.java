@@ -1,4 +1,4 @@
-package com.chen.mthread.n2.util;
+package mthread.n2.util;
 
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.chen.mthread.creat_thread;
+package mthread.creat_thread;
 
 /**
 * @projectName PAT_Java

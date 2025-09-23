@@ -1,4 +1,4 @@
-package com.chen.mthread.test;
+package mthread.test;
 
 /**
 * @projectName PAT_Java

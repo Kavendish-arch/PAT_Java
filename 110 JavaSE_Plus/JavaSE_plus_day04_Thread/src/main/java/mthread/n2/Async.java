@@ -1,6 +1,7 @@
-package com.chen.mthread.n2;
+package mthread.n2;
 
-import com.chen.mthread.n2.util.FileReader;
+
+import mthread.n2.util.FileReader;
 
 import java.io.FileNotFoundException;
 
