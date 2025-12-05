@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: redis-demo
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=redis123
+    command:
+      - redis-server
+      - --requirepass redis123
+      - --maxmemory 128mb
+      - --maxmemory-policy allkeys-lru
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis123", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  redis-data:
+    driver: local
