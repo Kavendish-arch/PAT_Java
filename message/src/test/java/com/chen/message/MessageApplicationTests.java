@@ -1,13 +1,13 @@
-package com.chen.demo4;
+package com.chen.message;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Demo4ApplicationTests {
+class MessageApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

@@ -5,16 +5,15 @@ services:
     image: redis:7.2-alpine
     container_name: redis-demo
     ports:
-      - "6379:6379"
+      - "6380:6380"
     environment:
       - REDIS_PASSWORD=redis123
     command:
       - redis-server
-      - --requirepass redis123
-      - --maxmemory 128mb
-      - --maxmemory-policy allkeys-lru
+      - /usr/local/etc/redis/redis.conf
     volumes:
       - redis-data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
     healthcheck:
       test: ["CMD", "redis-cli", "-a", "redis123", "ping"]
       interval: 30s
