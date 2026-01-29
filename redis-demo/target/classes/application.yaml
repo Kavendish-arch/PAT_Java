@@ -1,0 +1,10 @@
+spring:
+  redis:
+    host: localhost
+    port: 6380
+    password: redis123
+    database: 0
+  application:
+    name: redis-demo
+server:
+  port: 10086

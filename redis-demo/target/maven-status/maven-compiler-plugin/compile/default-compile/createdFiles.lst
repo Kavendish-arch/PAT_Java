@@ -1,0 +1,4 @@
+com\example\redisdemo\config\RedisConfig.class
+com\example\redisdemo\controller\RedisController.class
+com\example\redisdemo\RedisDemoApplication.class
+com\example\redisdemo\service\RedisService.class
